@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SupportDesk – IT-supportsager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>SupportDesk</h1>
+    <p class="subtitle">Oversigt over IT-supportsager – se, overtag og følg sagerne</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <label for="employee-select">Logget ind som medarbejder:</label>
+      <select id="employee-select"></select>
+
+      <div class="toolbar">
+        <input type="search" id="filter-input" placeholder="Filtrér sager (søg i titel)…" />
+        <select id="status-filter">
+          <option value="">Alle statusser</option>
+          <option value="open">Åben</option>
+          <option value="in_progress">Under behandling</option>
+          <option value="closed">Afsluttet</option>
+        </select>
+        <button id="refresh-btn" type="button">Opdater oversigt</button>
+      </div>
+    </section>
+
+    <div id="message-area" class="message hidden" role="status"></div>
+
+    <section>
+      <h2>Supportsager</h2>
+      <div id="ticket-list" class="ticket-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
